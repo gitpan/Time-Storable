@@ -1,0 +1,6 @@
+Revision history for Perl extension Time::Storable.
+
+0.1	  1757813.946788298
+	- Original version. Added storable() and local_storable() method. This is
+	  more of a proof-of-concept version. Comments welcome.
+

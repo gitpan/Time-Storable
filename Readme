@@ -1,0 +1,36 @@
+NAME
+    Time::Storable - Store times in a portable format
+
+SYNOPSIS
+      use Time::Storable;
+
+DESCRIPTION
+    The idea is to provide some format for storing dates - particularly
+    dates that fall outside of the epoch - that is, either before 1970, or
+    after 2038. This is a combination of Time::JulianDay type dates, and
+    regular epoch time type time stamps.
+
+    The time is stored in a single format, rather than in two numbers, for
+    simplicity of putting this in a database. This module provides a full
+    set of tools for getting useful information out of this time storage
+    format, so that it is not a burden to put it in this format.
+
+    The time format used here is just experimental. I'm not sure if this is
+    the best way do to things or not. It's susceptible to rounding error if
+    you treat it like a number. But the whole point of making it look like a
+    number was specifically so that you can put it in numerical database
+    fields, rather than having to put it in a string field.
+
+    Please let me know what you think about this, and I'll incorporate ideas
+    into the next version.
+
+    Eventually there will be convenient ways to get seconds, minutes, hours,
+    days, months, years out of a Time::Storable string. Perhaps even this
+    evening.
+
+AUTHOR
+    Rich Bowen <rbowen@rcbowen.com>
+
+SEE ALSO
+    perl(1).
+
